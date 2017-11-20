@@ -74,37 +74,12 @@
     console.log("Boo error");
   }
 
-
   function sessionListener(e) {
     session = e;
-    onLaunch();
     //if (session.media.length != 0) {
     //  onMediaDiscovered('onRequestSessionSuccess', session.media[0]);
     //}
-  }  
-
-  function onLaunch() {
-
-    var video = document.querySelector('video');
-
-    var mediaInfo = new chrome.cast.media.MediaInfo(video.currentSrc);
-    var request = new chrome.cast.media.LoadRequest(mediaInfo);
-    session.loadMedia(request,
-   onMediaDiscovered.bind(this, 'loadMedia'),
-   onMediaError);
-
-
   }
-function onMediaDiscovered(how, media) {
-   currentMedia = media;
-}
-
-function onMediaError(e) {
-  console.log(e);
-  
-}
-
-
 </script>
 
 

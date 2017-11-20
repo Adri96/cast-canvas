@@ -17,7 +17,7 @@ main();
 //for webrtc don't care about connecting video element anymore
 
 var canvas = document.querySelector('canvas');
-var video = document.querySelector('video');
+//var video = document.querySelector('video');
 /*
 var stream = canvas.captureStream();
 video.srcObject = stream;
